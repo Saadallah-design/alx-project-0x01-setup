@@ -1,4 +1,4 @@
-import { UserData, UserModalProps } from "@/interfaces";
+import { UserData, UserModalProps, UserProps } from "@/interfaces";
 import React, { useState} from "react";
 
 const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
@@ -28,7 +28,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
   
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
-      
+
       setFormData((prev) => ({
         ...prev,
         [name]: value
